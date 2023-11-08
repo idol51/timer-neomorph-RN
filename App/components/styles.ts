@@ -43,7 +43,9 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: 32,
         height: 32,
-        zIndex: 10
+        zIndex: 10,
+        justifyContent: "center",
+        alignItems: "center"
     },
     clockHourIndex: { 
         backgroundColor: "#BBB", 
@@ -57,7 +59,7 @@ export const styles = StyleSheet.create({
         shadowRadius: 10,
         borderRadius: 300,
         backgroundColor: COLORS.BACKGROUND,
-        width: windowWidth - 48,
+        width: windowWidth - 40,
         height: 60,
         flexDirection: "row",
         justifyContent: "space-evenly",
@@ -75,5 +77,13 @@ export const styles = StyleSheet.create({
         color: COLORS.TEXT,
         fontSize: 16,
         fontWeight: "bold"
+    },
+
+    headerWrapper: { 
+        backgroundColor: COLORS.BACKGROUND, 
+        justifyContent: "center", 
+        alignItems: "center", 
+        gap: 20,
+        paddingVertical: 20,
     }
 })

@@ -3,34 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import Svg, { Polygon } from 'react-native-svg';
+import { COLORS } from '../assets/styles/constants';
 
 export default function Needle({ length, deg }: { length: number, deg: number }) {
     
   return (
-    // <View 
-    //     style={{
-    //         position: "absolute",
-    //         height: 160,
-    //         width: 16,
-    //         transform: [{ rotateZ: `${deg}deg` }]
-    //     }}
-    // >
-    //     <View
-    //         style={{
-    //             width: 0,
-    //             height: 0,
-    //             backgroundColor: "transparent",
-    //             borderStyle: "solid",
-    //             borderLeftWidth: 8,
-    //             borderRightWidth: 8,
-    //             borderBottomWidth: 80,
-    //             borderLeftColor: "transparent",
-    //             borderRightColor: "transparent",
-    //             borderBottomColor: "blue"
-    //         }}
-    //     />
-    // </View>
-
     <MaskedView
         style={{ width: 16, height: length*2, position: "absolute", transform: [{ rotateZ: `${deg}deg` }]  }}
         maskElement={
@@ -40,7 +17,7 @@ export default function Needle({ length, deg }: { length: number, deg: number })
         }>
         
         <LinearGradient
-            colors={[ '#afffd2', '#0E84F3', '#0E84F3']} // Replace with your desired gradient colors
+            colors={[ COLORS.SECONDARY, COLORS.PRIMARY, COLORS.PRIMARY]} // Replace with your desired gradient colors
             style={{
             position: 'absolute',
             left: 0,
